@@ -1,1 +1,2 @@
-This project is not yet completed due to cors error and has been deployed through gh-pages to ensure the api endpoints are working, cors errors are fixed
+# Wikipedia Viewer
+## Check it out [Here](https://its-me-sv.github.io/wiki-viewer/)
