@@ -1,9 +1,10 @@
 import React from 'react';
 
-import './header.styles.css';
+// Styles
+import {HeaderTextStyles} from './header.styles';
 
 const Header = () => (
-    <h1>Wikipedia Viewer</h1>
+    <HeaderTextStyles>Wikipedia Viewer</HeaderTextStyles>
 );
 
 export default Header;

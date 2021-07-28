@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import './app.styles.css';
+// Styles
+import {AppContainer} from './app.styles';
 
 // Custom Components
 import Header from '../../components/header/header.component';
@@ -9,6 +10,7 @@ import RandomPageButton from '../../components/random-page-button/random-page-bu
 import SearchBox from '../../components/search-box/search-box.component';
 import ResultContainer from '../../components/result-container/result-container.component';
 
+// Redux Actions
 import requestWikipediaData from '../../redux/wikipedia-data/wikipedia-data.actions';
 
 class App extends React.Component {
@@ -16,6 +18,7 @@ class App extends React.Component {
     handleEnterKey = ({keyCode}) => {
         if (keyCode !== 13) return;
         const {onRequestWikipediaData, searchFieldText} = this.props;
+        if (searchFieldText.length < 1) return;
         onRequestWikipediaData(searchFieldText);
     }
 
@@ -29,12 +32,12 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="app-container">
+            <AppContainer>
                 <Header />
                 <RandomPageButton />
                 <SearchBox />
                 <ResultContainer />
-            </div>
+            </AppContainer>
         );
     }
 }

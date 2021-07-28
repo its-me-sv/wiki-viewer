@@ -1,23 +1,30 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import './result-container.styles.css';
+// Styles
+import {
+    ResultContainerStyles,
+    ErrorStyles
+} from './result-container.styles';
 
+// Custom components
 import ResultBox from '../result-box/result-box.component';
 
+// Resources from assests
 import {ReactComponent as Loader} from '../../assets/Loader.svg';
 
 const ResultContainer = ({fetchedData, error, isPending}) => {
     return (
-        <div className="result-container">
+        <ResultContainerStyles>
             {
                 isPending === false 
                 ? "query" in fetchedData
-                ? Object.values(fetchedData.query.pages).map((obj, idx)=> <ResultBox key={idx} {...obj}/>)
-                : <div className="error">No Result Found</div>
+                ? Object.values(fetchedData.query.pages).map(
+                    (obj, idx)=> <ResultBox key={idx} {...obj}/>)
+                : <ErrorStyles>No Result Found</ErrorStyles>
                 : isPending === true && <Loader />
             }
-        </div>
+        </ResultContainerStyles>
     );
 };
 

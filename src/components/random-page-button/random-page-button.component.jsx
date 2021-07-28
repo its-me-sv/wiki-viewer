@@ -1,12 +1,15 @@
 import React from 'react';
 
-import './random-page-button.styles.css';
+// Styles
+import {RandomPageButtonStyles} from './random-page-button.styles';
 
 const RandomPageButton = () => (
-    <a 
+    <RandomPageButtonStyles
         href="https://en.wikipedia.org/wiki/Special:Random"
         className="random-button"
-    >Visit an random article</a>
+        target="_blank"
+        rel="noreferrer"
+    >Visit an random article</RandomPageButtonStyles>
 );
 
 export default RandomPageButton;

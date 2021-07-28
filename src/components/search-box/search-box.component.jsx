@@ -1,22 +1,27 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import './search-box.styles.css';
+// Styles
+import {
+    FieldStyles,
+    FieldLabelStyles,
+    InputFieldStyles
+} from './search-box.styles';
 
+// Redux Actions
 import {onSearchFieldChange} from '../../redux/search-field/search-field.actions';
 
 const SearchBox = ({searchFieldText, onSearchFieldChange}) => {
     return (
-        <div className="field">
-            <span className="field-label">Search Article</span>
-            <input
+        <FieldStyles>
+            <FieldLabelStyles>Search Article</FieldLabelStyles>
+            <InputFieldStyles
                 type="text"
-                className="input-field"
                 placeholder="Eg: Javascript"
                 value={searchFieldText}
                 onChange={onSearchFieldChange}
             />
-        </div>
+        </FieldStyles>
     );
 };
 

@@ -1,13 +1,22 @@
 import React from 'react';
 
-import './result-box.styles.css';
+// Styles
+import {
+    BoxResultStyles,
+    ResourceLinkStyles,
+    ExtractStyles
+} from './result-box.styles';
 
 const ResultBox = ({pageid, title, extract}) => {
     return (
-        <div className="box-result">
-            <a href={`https://en.wikipedia.org/?curid=${pageid}`}>{title}</a>
-            <p className="extract">{extract}</p>
-        </div>
+        <BoxResultStyles>
+            <ResourceLinkStyles 
+                href={`https://en.wikipedia.org/?curid=${pageid}`}
+                target="_blank"
+                rel="noreferrer"
+            >{title}</ResourceLinkStyles>
+            <ExtractStyles>{extract}</ExtractStyles>
+        </BoxResultStyles>
     );
 };
 
