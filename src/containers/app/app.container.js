@@ -7,6 +7,7 @@ import './app.styles.css';
 import Header from '../../components/header/header.component';
 import RandomPageButton from '../../components/random-page-button/random-page-button.component';
 import SearchBox from '../../components/search-box/search-box.component';
+import ResultContainer from '../../components/result-container/result-container.component';
 
 import requestWikipediaData from '../../redux/wikipedia-data/wikipedia-data.actions';
 
@@ -27,28 +28,19 @@ class App extends React.Component {
     }
 
     render() {
-        const {searchFieldText, wikiData} = this.props;
-        console.log(wikiData);
         return (
             <div className="app-container">
                 <Header />
                 <RandomPageButton />
                 <SearchBox />
-                {
-                    searchFieldText.length > 0 && wikiData
-                    ? <h4>Results for: {searchFieldText} {JSON.stringify(wikiData)}</h4>
-                    : null
-                }
+                <ResultContainer />
             </div>
         );
     }
 }
 
-const mapStateToProps = ({searchField, wikipediaData}) => ({
-    searchFieldText: searchField.searchFieldText,
-    wikiFetching: wikipediaData.isPending,
-    wikiError: wikipediaData.error,
-    wikiData: wikipediaData.fetchedData
+const mapStateToProps = ({searchField}) => ({
+    searchFieldText: searchField.searchFieldText
 });
 
 const mapDispatchToProps = dispatch => ({
