@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/wiki-viewer/static/css/main.37266599.chunk.css",
-    "main.js": "/wiki-viewer/static/js/main.5fee271b.chunk.js",
-    "main.js.map": "/wiki-viewer/static/js/main.5fee271b.chunk.js.map",
+    "main.css": "/wiki-viewer/static/css/main.ef727bbc.chunk.css",
+    "main.js": "/wiki-viewer/static/js/main.790e310b.chunk.js",
+    "main.js.map": "/wiki-viewer/static/js/main.790e310b.chunk.js.map",
     "runtime-main.js": "/wiki-viewer/static/js/runtime-main.b7b17fb5.js",
     "runtime-main.js.map": "/wiki-viewer/static/js/runtime-main.b7b17fb5.js.map",
-    "static/js/2.6b4f75d7.chunk.js": "/wiki-viewer/static/js/2.6b4f75d7.chunk.js",
-    "static/js/2.6b4f75d7.chunk.js.map": "/wiki-viewer/static/js/2.6b4f75d7.chunk.js.map",
+    "static/js/2.4a7c906b.chunk.js": "/wiki-viewer/static/js/2.4a7c906b.chunk.js",
+    "static/js/2.4a7c906b.chunk.js.map": "/wiki-viewer/static/js/2.4a7c906b.chunk.js.map",
     "index.html": "/wiki-viewer/index.html",
-    "static/css/main.37266599.chunk.css.map": "/wiki-viewer/static/css/main.37266599.chunk.css.map",
-    "static/js/2.6b4f75d7.chunk.js.LICENSE.txt": "/wiki-viewer/static/js/2.6b4f75d7.chunk.js.LICENSE.txt",
+    "static/css/main.ef727bbc.chunk.css.map": "/wiki-viewer/static/css/main.ef727bbc.chunk.css.map",
+    "static/js/2.4a7c906b.chunk.js.LICENSE.txt": "/wiki-viewer/static/js/2.4a7c906b.chunk.js.LICENSE.txt",
     "static/media/Loader.da82c788.svg": "/wiki-viewer/static/media/Loader.da82c788.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b7b17fb5.js",
-    "static/js/2.6b4f75d7.chunk.js",
-    "static/css/main.37266599.chunk.css",
-    "static/js/main.5fee271b.chunk.js"
+    "static/js/2.4a7c906b.chunk.js",
+    "static/css/main.ef727bbc.chunk.css",
+    "static/js/main.790e310b.chunk.js"
   ]
 }
