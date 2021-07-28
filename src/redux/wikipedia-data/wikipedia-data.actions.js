@@ -6,7 +6,7 @@ const API_CALL_BACK = '&callback=JSON_CALLBACK';
 const requestWikipediaData = phrase => dispatch => {
     dispatch({type:wikipediaDataTypes.FETCH_DATA_PENDING});
     const urlToFetch = API_URL + phrase + API_CALL_BACK;
-    fetch(urlToFetch)
+    fetch(urlToFetch, {mode: "no-cors"})
     .then(response => response.json())
     .then(data => dispatch({type:wikipediaDataTypes.FETCH_DATA_SUCCESS, payload: data}))
     .catch(error => dispatch({type:wikipediaDataTypes.FETCH_DATA_FAILURE, payload: error}));
