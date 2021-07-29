@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wiki-viewer/static/css/main.ef727bbc.chunk.css",
-    "main.js": "/wiki-viewer/static/js/main.790e310b.chunk.js",
-    "main.js.map": "/wiki-viewer/static/js/main.790e310b.chunk.js.map",
+    "main.js": "/wiki-viewer/static/js/main.80adc16b.chunk.js",
+    "main.js.map": "/wiki-viewer/static/js/main.80adc16b.chunk.js.map",
     "runtime-main.js": "/wiki-viewer/static/js/runtime-main.b7b17fb5.js",
     "runtime-main.js.map": "/wiki-viewer/static/js/runtime-main.b7b17fb5.js.map",
     "static/js/2.4a7c906b.chunk.js": "/wiki-viewer/static/js/2.4a7c906b.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.b7b17fb5.js",
     "static/js/2.4a7c906b.chunk.js",
     "static/css/main.ef727bbc.chunk.css",
-    "static/js/main.790e310b.chunk.js"
+    "static/js/main.80adc16b.chunk.js"
   ]
 }
