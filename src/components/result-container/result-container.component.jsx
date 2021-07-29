@@ -19,8 +19,9 @@ const ResultContainer = ({fetchedData, error, isPending}) => {
             {
                 isPending === false 
                 ? "query" in fetchedData
-                ? Object.values(fetchedData.query.pages).map(
-                    (obj, idx)=> <ResultBox key={idx} {...obj}/>)
+                ? Object.values(fetchedData.query.pages)
+                    .sort((a, b) => b.extract.length - a.extract.length)
+                    .map((obj, idx)=> <ResultBox key={idx} {...obj}/>)
                 : <ErrorStyles>No Result Found</ErrorStyles>
                 : isPending === true && <Loader />
             }
