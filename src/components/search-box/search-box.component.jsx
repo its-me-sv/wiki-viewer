@@ -10,8 +10,9 @@ import {
 
 // Redux Actions
 import {onSearchFieldChange} from '../../redux/search-field/search-field.actions';
+import requestWikipediaData from '../../redux/wikipedia-data/wikipedia-data.actions';
 
-const SearchBox = ({searchFieldText, onSearchFieldChange}) => {
+const SearchBox = ({searchFieldText, onSearchFieldChange, onRequestWikipediaData}) => {
     return (
         <FieldStyles>
             <FieldLabelStyles>Search Article</FieldLabelStyles>
@@ -19,7 +20,12 @@ const SearchBox = ({searchFieldText, onSearchFieldChange}) => {
                 type="text"
                 placeholder="Eg: Javascript"
                 value={searchFieldText}
-                onChange={onSearchFieldChange}
+                onChange={
+                    event => {
+                        onRequestWikipediaData(event.target.value);
+                        onSearchFieldChange(event);
+                    }
+                }
             />
         </FieldStyles>
     );
@@ -30,7 +36,8 @@ const mapStateToProps = ({searchField}) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onSearchFieldChange: event => dispatch(onSearchFieldChange(event))
+    onSearchFieldChange: event => dispatch(onSearchFieldChange(event)),
+    onRequestWikipediaData: phrase => dispatch(requestWikipediaData(phrase))
 });
 
 export default connect(
